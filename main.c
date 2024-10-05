@@ -57,8 +57,27 @@ int main() {
     // Get shape dimensions
     do
     {
-    printf("%c \n", shapeSelection);
-    } 
+    
+    if (shapeSelection == 'S') {
+
+        float squareLength; 
+        float squareArea;
+        float squarePerimeter;
+
+        printf("\nEnter the length of one side of the square (remember all sides are equal): ");
+
+        validInput = scanf("%f", &squareLength) == 1;
+
+        if (!validInput) {
+            printf("\nInvalid input. Please try again.\n");
+        } else {
+            squareArea = squareLength * squareLength;
+            squarePerimeter = 4 * squareLength;
+            printf("\nArea of square with side length %.2f: %.2f\nPerimeter of square with side length %.2f: %.2f\n", squareLength, squareArea, squareLength, squarePerimeter);
+        }
+    } else {
+
+    } }
     while (!validInput);
 
     
