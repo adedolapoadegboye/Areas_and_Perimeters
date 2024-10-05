@@ -130,8 +130,8 @@ int main() {
         printf("\nEnter the height of the triangle: \n");
         validInput = validInput && (scanf("%lf", &triangleHeight) == 1);
 
-        printf("\nEnter the lengths of the three sides of the triangle: \n");
-        validInput = validInput && (scanf("%lf %lf %lf", &triangleSide1, &triangleSide2, &triangleSide3) == 1);
+        printf("\nEnter the lengths of the three sides of the triangle (in any order, separated by pressing the enter key): \n");
+        validInput = validInput && (scanf("%lf %lf %lf", &triangleSide1, &triangleSide2, &triangleSide3) == 3);
 
         if (!validInput || triangleBase <= 0 || triangleHeight <= 0 || triangleSide1 <= 0 || triangleSide2 <= 0 || triangleSide3 <= 0) {
             printf("\nInvalid inputs. Please check your inputs and try again.\n");
