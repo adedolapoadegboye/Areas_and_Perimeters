@@ -5,20 +5,24 @@
 int main() {
 
     // Define variables and limits
-    char username[1000];
-    bool validInput =  false;
+    char username[10];
+    bool validInput;
 
-    do{
+    do {
 
     // Get basic user info for personalization
     printf("Enter your username: ");
-    scanf("%s", username);
-    printf("Hello %s!.\nWelcome to the Area and Perimeter Calculator\n", username);
-    validInput = true;
+    validInput = scanf("%s", username) == 1;
+
+    if (!validInput){
+       printf("Invalid username. Please try again.\n");
+    }
+    else {
+        printf("Hello %s!.\nWelcome to the Area and Perimeter Calculator\n", username);    }
 
     }
-    
-    while(validInput);
+
+    while(!validInput);
 
     return 0;
 }
