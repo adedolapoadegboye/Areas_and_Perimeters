@@ -5,7 +5,7 @@
 int main() {
 
     // Define variables and limits
-    char username[10];
+    char username[5];
     bool validInput;
 
     do {
@@ -18,7 +18,7 @@ int main() {
        printf("Invalid username. Please try again.\n");
     }
     else {
-        printf("Hello %s!.\nWelcome to the Area and Perimeter Calculator\n", username);    }
+        printf("Hello %s!\nWelcome to the Area and Perimeter Calculator\n", username);    }
 
     }
 
