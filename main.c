@@ -54,7 +54,7 @@ int main() {
     } while(!validInput);
 
 
-    // Get shape dimensions
+    // Perform square calculations
     do
     {
     
@@ -64,7 +64,7 @@ int main() {
         float squareArea;
         float squarePerimeter;
 
-        printf("\nEnter the length of one side of the square (remember all sides are equal): ");
+        printf("\nEnter the length of one side of the square (remember all sides are equal): \n");
 
         validInput = scanf("%f", &squareLength) == 1;
 
@@ -73,13 +73,43 @@ int main() {
         } else {
             squareArea = squareLength * squareLength;
             squarePerimeter = 4 * squareLength;
-            printf("\nArea of square with side length %.2f: %.2f\nPerimeter of square with side length %.2f: %.2f\n", squareLength, squareArea, squareLength, squarePerimeter);
+            printf("\nArea of square with side length %.2f: %.2f\n\nPerimeter of square with side length %.2f: %.2f\n", squareLength, squareArea, squareLength, squarePerimeter);
         }
     } else {
-
+        printf("\nInvalid selection. Please try again.\n");
     } }
     while (!validInput);
 
+    // Perform rectangle calculations
+    do
+    {
+    
+    if (shapeSelection == 'R') {
+
+        float rectangleLength;
+        float rectangleBreadth; 
+        float rectangleArea;
+        float rectanglePerimeter;
+
+        printf("\nEnter the length of the rectangle (the longer side): \n");
+
+        validInput = scanf("%f", &rectangleLength) == 1;
+
+        printf("\nEnter the breadth of the rectangle (the shorter side): \n");
+
+        validInput = scanf("%f", &rectangleBreadth) == 1;
+
+        if (!validInput) {
+            printf("\nInvalid inputs. Please check your inputs andtry again.\n");
+        } else {
+            rectangleArea = rectangleLength * rectangleBreadth;
+            rectanglePerimeter = 2 * (rectangleLength + rectangleBreadth);
+            printf("\nArea of rectangle with length %.2f and breadth %.2f: %.2f\n\nPerimeter of rectangle with length %.2f and breadth %.2f: %.2f\n", rectangleLength, rectangleBreadth, rectangleArea, rectangleLength, rectangleBreadth, rectanglePerimeter);
+        }
+    } else {
+        printf("\nInvalid selection. Please try again.\n");
+    } }
+    while (!validInput);
     
     return 0;
 }
