@@ -131,7 +131,7 @@ int main() {
         } while (!validInput);
 
         // Ask the user if they want to restart the program
-        printf("Would you like to run the program again? (y/n): \n");
+        printf("\nWould you like to run the program again? (y/n): \n");
         scanf(" %c", &restart);
         clear_input_buffer();  // Clear any trailing characters from buffer
 
