@@ -137,5 +137,6 @@ int main() {
 
     } while (restart == 'y');
 
+    printf("\nThanks for using the Area and Perimeter Calculator!\n");
     return 0;
 }
